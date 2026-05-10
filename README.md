@@ -1,0 +1,2 @@
+# CS340_Notifications
+Notifications microservice

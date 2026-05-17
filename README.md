@@ -1,4 +1,4 @@
-# CS340_Notifications
+# CS361_Notifications
 A lightweight REST API microservice for managing notifications. Supports adding, retrieving, and clearing notifications.
 
 

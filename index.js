@@ -4,7 +4,7 @@ const fs = require('fs');
 const path = require('path');
 
 const app = express();
-const DATA_FILE = path.join(__dirname, 'notifications.json');
+const DATA_FILE = process.env.DATA_FILE || path.join(__dirname, 'notifications.json');
 
 app.use(cors());
 app.use(express.json());
@@ -54,4 +54,8 @@ app.delete('/api/notifications', (req, res) => {
   res.status(200).json({ success: true, message: "All notifications cleared" });
 });
 
-app.listen(3002, () => console.log('Notification service running on port 3002'));
+if (require.main === module) {
+  app.listen(3002, () => console.log('Notification service running on port 3002'));
+}
+
+module.exports = app;

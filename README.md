@@ -1,7 +1,6 @@
 # CS340_Notifications
 A lightweight REST API microservice for managing notifications. Supports adding, retrieving, and clearing notifications.
 
-
 ## Base URL
 http://localhost:3002
 
@@ -19,6 +18,9 @@ GET /api/notifications
 
 ### Clear all notifications
 DELETE /api/notifications
+
+## UML Sequence Diagram 
+![UML Sequence Diagram for notifications REST API](./assets/uml-diagram.png)
 
 ## Notification Types
 | Type | When to use |
